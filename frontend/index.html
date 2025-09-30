@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#121212" />
+    <meta
+      name="description"
+      content="SNote - Your intelligent journal."
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>SNote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'gray-900': '#121212',
+              'gray-800': '#1E1E1E',
+              'gray-700': '#2D2D2D',
+              'gray-600': '#424242',
+              'gray-400': '#A0A0A0',
+              'gray-300': '#BDBDBD',
+              accent: {
+                100: 'hsl(var(--accent-h), var(--accent-s), 95%)',
+                200: 'hsl(var(--accent-h), var(--accent-s), 85%)',
+                300: 'hsl(var(--accent-h), var(--accent-s), 75%)',
+                400: 'hsl(var(--accent-h), var(--accent-s), 65%)',
+                500: 'hsl(var(--accent-h), var(--accent-s), var(--accent-l))',
+                600: 'hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 8%))',
+                700: 'hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 16%))',
+                800: 'hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 24%))',
+                900: 'hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 32%))',
+                DEFAULT: 'hsl(var(--accent-h), var(--accent-s), var(--accent-l))',
+              },
+              'accent-contrast': 'rgb(var(--color-accent-text-rgb))',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.4s ease-in-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              }
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      .hide-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .print-only {
+        display: none;
+      }
+      @media print {
+        /* Reset layout constraints from screen styles to allow content to flow across pages */
+        body, html, #root, #root > div, main {
+            height: auto !important;
+            overflow: visible !important;
+            display: block !important;
+        }
+
+        .not-printable {
+            display: none !important;
+        }
+        .print-only {
+            display: block !important;
+        }
+        .print-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5em;
+        }
+        /* Ensure markdown body can grow and has correct base text color */
+        .markdown-body {
+            height: auto !important;
+            overflow: visible !important;
+            color: #000 !important;
+        }
+        /* Reset dark mode styles for printing */
+        html.dark .markdown-body {
+            color: #000 !important;
+        }
+        html.dark .markdown-body a {
+            color: #0563c1 !important;
+        }
+        html.dark .markdown-body code, html.dark .markdown-body pre {
+            background-color: #f6f8fa !important;
+            color: #000 !important;
+        }
+        @page {
+            margin: 0.75in;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
+<script type="importmap">
+{
+  "imports": {
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "jszip": "https://aistudiocdn.com/jszip@^3.10.1",
+    "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.1",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "rehype-raw": "https://aistudiocdn.com/rehype-raw@^7.0.0",
+    "rehype-highlight": "https://aistudiocdn.com/rehype-highlight@^7.0.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

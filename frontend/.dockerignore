@@ -1,0 +1,23 @@
+# Node and package artifacts
+node_modules
+npm-debug.log
+package-lock.json
+
+# Build output
+dist
+build
+
+# Environment
+.env
+.env.*
+
+# Local editor and OS files
+.vscode/
+*.swp
+.DS_Store
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional: exclude large assets or test fixtures if present
+# assets/test-images/

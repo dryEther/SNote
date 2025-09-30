@@ -1,0 +1,27 @@
+services:
+  snote:
+    image: ritabanguha/snote:v1
+    container_name: snote
+    environment:
+      - PORT=4000
+      - FRONTEND_URL=http://localhost:80
+      - JWT_SECRET=SuperSecret
+      - TOKEN_EXPIRY=2h
+      - DATA_ROOT=./Data
+      - USERS_ROOT=./Users
+      - DEBUG=false
+      - OPENAI_API_KEY=your_openai_key
+      - API_KEY=your_gemini_key
+      - API_URL=https://generativelanguage.googleapis.com/v1beta
+      - OLLAMA_HOST_URL=http://host.docker.internal:11434
+      - CUSTOM_CHAT_COMPLETION_URL=
+      - CUSTOM_MODEL_LIST_URL=
+      - CUSTOM_API_KEY=
+    ports:
+      - "3000:80"  # access everything via http://localhost:3000
+    volumes:
+      - ./Data:/app/Data
+      - ./Users:/app/Users
+
+    
+

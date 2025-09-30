@@ -137,3 +137,47 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Node modules and logs
+backend/node_modules
+backend/npm-debug.log
+
+frontend/node_modules
+frontend/npm-debug.log
+
+# Docker and compose
+backend/dockerfile
+backend/docker-compose.yml
+backend/ConfigFiles/*
+backend/Data/*
+backend/Users/*
+
+frontend/Dockerfile
+frontend/docker-compose.yml
+
+# Environment and secrets
+frontend/.env
+backend/.env
+backend/*.yml
+frontend/*.yml
+frontend/*.local
+backend/*.local
+frontend/.env*
+backend/.env*
+
+# App data and uploads (large / user-specific)
+backend/Data/
+backend/uploads/
+backend/Users/
+
+# Local editor / OS files
+.vscode/
+*.swp
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+
+# npm cache and lockfiles (if you want locks to be copied, remove)
+# package-lock.json

@@ -1,0 +1,5 @@
+{
+  "name": "SNote",
+  "description": "SNote is a smart notes and journal application that uses AI to enrich, format, and complete your thoughts. Organize your notes in a hierarchical folder structure, write in plain text or Markdown, and tag notes for AI enhancement.",
+  "requestFramePermissions": []
+}

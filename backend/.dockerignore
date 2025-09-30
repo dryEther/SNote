@@ -1,0 +1,29 @@
+# Node modules and logs
+node_modules
+npm-debug.log
+
+# Docker and compose
+Dockerfile
+docker-compose.yml
+
+# Environment and secrets
+.env
+*.local
+.env*
+
+# App data and uploads (large / user-specific)
+Data/
+uploads/
+Users/
+
+# Local editor / OS files
+.vscode/
+*.swp
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+
+# npm cache and lockfiles (if you want locks to be copied, remove)
+# package-lock.json
