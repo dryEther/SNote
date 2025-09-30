@@ -1,7 +1,7 @@
 # <img src="https://github.com/dryEther/SNote/blob/7e4793ffb28c41562aa4efd92d87a2b6f34232ef/Assets/snote_icon.png" alt="SNote" width="30"/>SNote 
 **Your intelligent, customizable, and private workspace.**
 
-![Docker Pulls](https://img.shields.io/docker/pulls/ritabanguha/snote)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ritabanguha/snote.svg)](https://hub.docker.com/r/ritabanguha/snote)
 
 SNote is an AI-powered Markdown note-taking app that puts you in full control of your data. Whether you’re writing, coding, or organizing projects, SNote gives you a powerful, distraction-free environment with smart AI assistance.
 
